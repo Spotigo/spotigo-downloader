@@ -1,0 +1,7 @@
+*.mp3
+*.ogg
+*.json
+*.txt
+spotdl-go
+*.py
+.vscode
