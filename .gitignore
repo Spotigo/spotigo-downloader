@@ -5,3 +5,4 @@
 spotdl-go
 *.py
 .vscode
+*.exe
