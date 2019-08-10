@@ -180,6 +180,9 @@ func GetURL(uri string, uritype int) string {
     } else if uritype == 1 {
         id := strings.Replace(uri, "spotify:album:", "", -1)
         return "https://open.spotify.com/album/" + id
+    } else if uritype == 2 {
+        id := strings.Replace(uri, "spotify:playlist:", "", -1)
+        return "https://open.spotify.com/playlist/" + id
     }
 
     return ""

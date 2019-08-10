@@ -1,7 +1,7 @@
 package main
 
 import (
-    "./spotdl"
+    "../spotdl"
     "flag"
     "os"
     "fmt"
@@ -94,7 +94,19 @@ func main() {
             }
         }
     } else if *playlistPtr != "" {
-
+        if *newlistPtr == true {
+            if *listFilePtr != "" {
+                spotdl.CreateList(*listFilePtr, *playlistPtr, 2) // 1 is album 
+            } else {
+                spotdl.CreateList("list.txt", *playlistPtr, 2)
+            }
+        } else {
+            if *listFilePtr != "" {
+                spotdl.AppendToList(*listFilePtr, *playlistPtr, 2)
+            } else {
+                spotdl.AppendToList("list.txt", *playlistPtr, 2)
+            }
+        }
     }
 
     if *listPtr == true {
